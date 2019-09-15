@@ -77,6 +77,20 @@
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/location" />
 
+
+                <TextView
+                    android:id="@+id/aqius_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="10dp"
+
+                    android:gravity="center_horizontal"
+                    android:text="@string/aqius2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
                 <TextView
                     android:id="@+id/aqius"
                     android:layout_width="wrap_content"
@@ -89,20 +103,6 @@
                     android:textColor="@color/colorWhite"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/aqius_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginTop="10dp"
-
-                    android:gravity="center_horizontal"
-                    android:text="@string/aqius_text"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp"
-                    android:textStyle="normal" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -128,6 +128,19 @@
                     android:src="@drawable/location" />
 
                 <TextView
+                    android:id="@+id/aqicn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/aqicn2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <TextView
                     android:id="@+id/aqicn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,18 +153,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/aqicn_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/aqicn_text"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp"
-                    android:textStyle="normal" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -180,6 +182,20 @@
                 android:src="@drawable/location" />
 
             <TextView
+                android:id="@+id/time_stamp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/data_at_time"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/cambo"
+                android:textStyle="normal" />
+
+            <TextView
                 android:id="@+id/time_stamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -191,20 +207,6 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/time_stamp_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="@string/time_stamp_text"
-                android:textAllCaps="false"
-                android:textColor="@color/colorWhite"
-                android:textSize="20sp"
-                android:fontFamily="@font/cambo"
-                android:textStyle="normal" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

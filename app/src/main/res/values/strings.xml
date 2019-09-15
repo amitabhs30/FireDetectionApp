@@ -13,6 +13,12 @@
     <string name="time_stamp_text">Time Stamp</string>
     <string name="time_stamp">3.00</string>
     <string name="pollution">Pollution</string>
+    <string name="aqius1">aqius</string>
+    <string name="aqicn1">aqicn</string>
+    <string name="data_at_time">Data At Time</string>
+    <string name="aqius2">aqius-</string>
+    <string name="aqicn2">aqicn-</string>
+
     <string name="weather_impact">Impact on Weather</string>
     <string name="air_pressure">87.87</string>
     <string name="air_pressure_text">Air Pressure</string>
