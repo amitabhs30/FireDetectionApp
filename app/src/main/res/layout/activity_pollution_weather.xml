@@ -14,7 +14,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pollution"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/cambo"
         />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -201,4 +208,14 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorPurple"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:text="@string/weather_impact"
+        android:background="@drawable/white_button"
+        />
 </RelativeLayout>

@@ -13,5 +13,16 @@
     <string name="time_stamp_text">Time Stamp</string>
     <string name="time_stamp">3.00</string>
     <string name="pollution">Pollution</string>
-
+    <string name="weather_impact">Impact on Weather</string>
+    <string name="air_pressure">87.87</string>
+    <string name="air_pressure_text">Air Pressure</string>
+    <string name="humidity">87.87</string>
+    <string name="humidity_text">Humidity</string>
+    <string name="wind_speed">87.87</string>
+    <string name="wind_speed_text">Wind Speed</string>
+    <string name="wind_direction">87.87</string>
+    <string name="wind_direction_text">Wind Direction</string>
+    <string name="weather">Weather</string>
+    <string name="temp">40</string>
+    <string name="temp_text">C</string>
 </resources>
