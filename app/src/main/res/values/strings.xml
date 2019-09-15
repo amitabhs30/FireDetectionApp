@@ -12,5 +12,6 @@
     <string name="aqi">Air Quality Index</string>
     <string name="time_stamp_text">Time Stamp</string>
     <string name="time_stamp">3.00</string>
+    <string name="pollution">Pollution</string>
 
 </resources>
