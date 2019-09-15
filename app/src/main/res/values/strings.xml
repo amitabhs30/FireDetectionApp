@@ -10,5 +10,7 @@
     <string name="aqius_text">United States</string>
     <string name="aqicn_text">China</string>
     <string name="aqi">Air Quality Index</string>
+    <string name="time_stamp_text">Time Stamp</string>
+    <string name="time_stamp">3.00</string>
 
 </resources>
