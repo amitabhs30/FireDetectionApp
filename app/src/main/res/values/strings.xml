@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fire App</string>
+    <string name="app_name">Andriot</string>
     <string name="city">Delhi</string>
     <string name="latitude">20.27</string>
     <string name="longitude">20.27</string>
@@ -31,4 +31,5 @@
     <string name="weather">Weather</string>
     <string name="temp">40</string>
     <string name="temp_text">C</string>
+    <string name="fire">Fire Detection Application</string>
 </resources>
