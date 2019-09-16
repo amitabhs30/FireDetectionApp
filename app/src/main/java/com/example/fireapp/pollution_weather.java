@@ -2,7 +2,9 @@ package com.example.fireapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -82,4 +84,8 @@ public class pollution_weather extends AppCompatActivity {
         que.add(jor);
 
     }
+    public void Weather(View view) {
+        startActivity(new Intent(pollution_weather.this,Weather.class));
+    }
+
 }

@@ -220,6 +220,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
+        android:onClick="Weather"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

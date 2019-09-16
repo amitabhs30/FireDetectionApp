@@ -2,20 +2,16 @@ package com.example.fireapp.Model;
 
 public class DeviceDetails {
     private String name;
-    private double temp;
-    private double humidity;
-    private double heatIndex;
-    private boolean Indicator;
+    private String temp;
+    private String humidity;
 
-    public DeviceDetails() {
-    }
-
-    public DeviceDetails(String name, double temp, double humidity, double heatIndex, boolean indicator) {
+    public DeviceDetails(String name, String temp, String humidity) {
         this.name = name;
         this.temp = temp;
         this.humidity = humidity;
-        this.heatIndex = heatIndex;
-        Indicator = indicator;
+    }
+
+    public DeviceDetails() {
     }
 
     public String getName() {
@@ -26,35 +22,19 @@ public class DeviceDetails {
         this.name = name;
     }
 
-    public double getTemp() {
+    public String getTemp() {
         return temp;
     }
 
-    public void setTemp(double temp) {
+    public void setTemp(String temp) {
         this.temp = temp;
     }
 
-    public boolean isIndicator() {
-        return Indicator;
-    }
-
-    public void setIndicator(boolean indicator) {
-        Indicator = indicator;
-    }
-
-    public double getHumidity() {
+    public String getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(double humidity) {
+    public void setHumidity(String humidity) {
         this.humidity = humidity;
-    }
-
-    public double getHeatIndex() {
-        return heatIndex;
-    }
-
-    public void setHeatIndex(double heatIndex) {
-        this.heatIndex = heatIndex;
     }
 }
