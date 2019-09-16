@@ -16,11 +16,20 @@
         android:text="@string/pollution"
         android:textStyle="bold"
         android:textSize="30sp"
+        android:id="@+id/text"
         android:textColor="@color/colorWhite"
         android:gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/cambo"
         />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/pollution"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
