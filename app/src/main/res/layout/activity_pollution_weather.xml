@@ -75,7 +75,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/location" />
+                    android:src="@drawable/aqi" />
 
 
                 <TextView
@@ -125,7 +125,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/location" />
+                    android:src="@drawable/aqi" />
 
                 <TextView
                     android:id="@+id/aqicn_text"
@@ -179,7 +179,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/location" />
+                android:src="@drawable/time" />
 
             <TextView
                 android:id="@+id/time_stamp_text"
