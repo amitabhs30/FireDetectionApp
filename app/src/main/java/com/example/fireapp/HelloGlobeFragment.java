@@ -1,6 +1,7 @@
 package com.example.fireapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class HelloGlobeFragment extends GlobeMapFragment {
+public class HelloGlobeFragment extends GlobeMapFragment
+
+{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,4 +105,11 @@ public class HelloGlobeFragment extends GlobeMapFragment {
 
     }
 
+//    @Override
+//    public void onClick(View view) {
+//
+//        Intent intent = new Intent(HelloGlobeFragment.this, ));
+//        startActivity(intent);
+//
+//    }
 }
