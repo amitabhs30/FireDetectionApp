@@ -33,4 +33,6 @@
     <string name="temp">40</string>
     <string name="temp_text">C</string>
     <string name="fire">Fire Detection Application</string>
+    <string name="forest">FOREST</string>
+    <string name="fire_DETECT">FIRE DETECTOR</string>
 </resources>
