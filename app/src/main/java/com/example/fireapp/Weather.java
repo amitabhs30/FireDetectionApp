@@ -3,8 +3,13 @@ package com.example.fireapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.textclassifier.TextLinks;
@@ -30,15 +35,22 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Method;
 
+import static com.example.fireapp.App.CHANNEL_1_ID;
+
 public class Weather extends AppCompatActivity {
+    private NotificationManagerCompat notificationManagerCompat;
+    private String notif_title, notif_msg;
     TextView temp, airpressure, humidity, windSpeed, windDirection, ts;
     DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
     DeviceDetails Dd;
+    String tempS,humidityS;
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
+         notificationManagerCompat = NotificationManagerCompat.from(this);
         temp = findViewById(R.id.temp);
         airpressure = findViewById(R.id.air_pressure);
         humidity = findViewById(R.id.humidity);
@@ -66,10 +78,14 @@ public class Weather extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                String tempS=dataSnapshot.child("DHT22-1").child("Temperature").getValue(String.class);
-                String humidityS=dataSnapshot.child("DHT22-1").child("Humidity").getValue(String.class);
+
+                tempS=dataSnapshot.child("DHT22-1").child("Temperature").getValue(String.class);
+                SendNotifications();
+                humidityS=dataSnapshot.child("DHT22-1").child("Humidity").getValue(String.class);
                 temp.setText(tempS);
                 humidity.setText(humidityS);
+
+
             }
 
             @Override
@@ -80,6 +96,42 @@ public class Weather extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void SendNotifications() {
+    String t;
+
+        t=tempS.substring(0,tempS.length()-2);
+        if(Float.parseFloat((t))>20)
+        {
+            String msg= getString(R.string.text);
+            String title= getString(R.string.app_name);
+
+            Intent activityIntent = new Intent(this, MainActivity.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, activityIntent,0);
+//        Intent broadcastIntent = new Intent(this, NotificationReceiver.class);
+//        broadcastIntent.putExtra("toastMessage", msg);
+//        PendingIntent actionIntent = PendingIntent.getBroadcast(this, 0, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
+                    .setSmallIcon(R.drawable.alert)
+                    .setContentTitle(title)
+                    .setColor(Color.BLUE)
+                    .setContentText(msg)
+                    .setStyle(new NotificationCompat.BigTextStyle()
+                            .bigText(getString(R.string.text))
+                            .setBigContentTitle(title)
+                            .setSummaryText(getString(R.string.app_name)))
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                    .setContentIntent(pendingIntent)
+                    .setAutoCancel(true)
+                    .setOnlyAlertOnce(true)
+//                    .addAction(R.mipmap.ic_launcher, "Toast", actionIntent)
+                    .build();
+
+            notificationManagerCompat.notify(1,notification);
+        }
     }
 
     private void findData() {
