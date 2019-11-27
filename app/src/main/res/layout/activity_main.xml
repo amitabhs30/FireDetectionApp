@@ -8,10 +8,17 @@
     tools:context=".MainActivity">
 
 
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:src="@drawable/main"/>-->
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/forest"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/alert"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/main_text"/>
 
     <TextView
         android:layout_height="wrap_content"
