@@ -1,6 +1,7 @@
 package com.example.fireapp;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,7 +27,7 @@ import java.util.List;
 
 public class HelloGlobeFragment extends GlobeMapFragment
 
-{
+{   Context context;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +35,13 @@ public class HelloGlobeFragment extends GlobeMapFragment
         super.onCreateView(inflater, container, inState);
 
         // Do app specific setup logic.
+//        container.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(context,Home.class));
+//            }
+//        });
+
 
         return baseControl.getContentView();
     }
@@ -65,6 +73,7 @@ public class HelloGlobeFragment extends GlobeMapFragment
         // add layer and position
         globeControl.addLayer(baseLayer);
         globeControl.animatePositionGeo(-3.6704803, 40.5023056, 5, 1.0);
+
         insertSpheres();
     }
 
@@ -74,31 +83,29 @@ public class HelloGlobeFragment extends GlobeMapFragment
 
         // Kansas City
         ShapeSphere shape = new ShapeSphere();
-        shape.setLoc(Point2d.FromDegrees(-94.58, 39.1));
-        shape.setRadius(0.02f); // 1.0 is the radius of the Earth
-        shapes.add(shape);
+
 
         // Washington D.C.
         shape = new ShapeSphere();
-        shape.setLoc(Point2d.FromDegrees(-77.036667, 38.895111));
-        shape.setRadius(0.2f);
+        shape.setLoc(Point2d.FromDegrees(77.4988, 28.7522));
+        shape.setRadius(0.09f);
         shapes.add(shape);
 
         // McMurdo Station
         shape = new ShapeSphere();
-        shape.setLoc(Point2d.FromDegrees(166.666667, -77.85));
-        shape.setRadius(0.2f);
+        shape.setLoc(Point2d.FromDegrees(77.4988, 28.7522));
+        shape.setRadius(0.09f);
         shapes.add(shape);
 
         // Windhoek
         shape = new ShapeSphere();
-        shape.setLoc(Point2d.FromDegrees(17.083611, -22.57));
-        shape.setRadius(0.02f);
+        shape.setLoc(Point2d.FromDegrees(77.4988, 28.7522));
+        shape.setRadius(0.09f);
         shapes.add(shape);
 
 
         ShapeInfo shapeInfo = new ShapeInfo();
-        shapeInfo.setColor(1.0f, 1.0f, 0.0f, 0.0f); // R,G,B,A - values [0.0 => 1.0]
+        shapeInfo.setColor(1.0f, 0.0f, 0.0f, 0.0f); // R,G,B,A - values [0.0 => 1.0]
         shapeInfo.setDrawPriority(1000000);
 
         ComponentObject componentObject = globeControl.addShapes(shapes, shapeInfo, MaplyBaseController.ThreadMode.ThreadAny);

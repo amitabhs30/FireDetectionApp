@@ -111,6 +111,6 @@ public class Home extends AppCompatActivity {
     }
     public void intent(View view)
     {
-        startActivity(new Intent(Home.this,pollution_weather.class));
+        startActivity(new Intent(Home.this,FireMap.class));
     }
 }

@@ -44,6 +44,7 @@ public class Weather extends AppCompatActivity {
     DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
     DeviceDetails Dd;
     String tempS,humidityS;
+    CardView cardView;
 
      @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,13 @@ public class Weather extends AppCompatActivity {
         windSpeed = findViewById(R.id.wind_speed);
         windDirection = findViewById(R.id.wind_direction);
         ts = findViewById(R.id.time_stamp);
+        cardView=findViewById(R.id.globe);
+//        cardView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(Weather.this,FireMap.class));
+//            }
+//        });
         CardView Test = findViewById(R.id.Test);
         Dd=new DeviceDetails();
 
@@ -107,7 +115,7 @@ public class Weather extends AppCompatActivity {
             String msg= getString(R.string.text);
             String title= getString(R.string.app_name);
 
-            Intent activityIntent = new Intent(this, MainActivity.class);
+            Intent activityIntent = new Intent(this, Weather.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, activityIntent,0);
 //        Intent broadcastIntent = new Intent(this, NotificationReceiver.class);
 //        broadcastIntent.putExtra("toastMessage", msg);
